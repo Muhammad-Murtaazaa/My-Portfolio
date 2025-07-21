@@ -1,9 +1,13 @@
+/* === Base & Body === */
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #02000a;
-    color: #e0e0e0;
-    overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  background-color: #02000a;
+  color: #e0e0e0;
+  overflow-x: hidden;
+  padding-top: 3.3rem; /* Ensures content not hidden by mini nav */
 }
+
+/* === Glassmorphism for Cards/Nav === */
 .glass-effect {
   background: rgba(30, 16, 70, 0.45);
   backdrop-filter: blur(22px) saturate(180%);
@@ -13,50 +17,37 @@ body {
   transition: background 0.4s, border 0.4s, box-shadow 0.4s, transform 0.4s;
 }
 
-/* --- General Glassmorphism --- */
-
 .glass-effect:hover {
-    transform: translateY(-8px) scale(1.03);
-    background: rgba(30, 16, 70, 0.57);
-    border: 1.5px solid rgba(200, 180, 255, 0.32);
-    box-shadow: 0 12px 60px 0 rgba(190, 75, 255, 0.22);
+  transform: translateY(-8px) scale(1.03);
+  background: rgba(30, 16, 70, 0.57);
+  border: 1.5px solid rgba(200, 180, 255, 0.32);
+  box-shadow: 0 12px 60px 0 rgba(190, 75, 255, 0.22);
 }
 
-/* --- Animation Canvases --- */
+/* === Section/Canvas Positioning === */
 .effect-canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%; z-index: 0;
 }
 #hero-canvas { z-index: 0; }
 #skills-canvas { z-index: 0; opacity: 0.7; }
 #projects-canvas { z-index: 0; opacity: 0.9; }
+.canvas-section { position: relative; z-index: 1; overflow: hidden; }
+.content-wrapper { position: relative; z-index: 1; }
 
-.canvas-section {
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-}
-
-/* --- Content Styling --- */
-.content-wrapper {
-    position: relative;
-    z-index: 1;
-}
-
-/* Fade-in Animation */
+/* === Fade-in Animation === */
 .fade-in-section {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .fade-in-section.is-visible {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
+
+/* === Skill Card Glass === */
 .glass-skill {
   background: rgba(30, 16, 70, 0.47);
   backdrop-filter: blur(16px) saturate(170%);
@@ -68,11 +59,8 @@ body {
   padding-bottom: .8rem;
   padding-left: .3rem;
   padding-right: .3rem;
-  transition:
-    transform 0.35s cubic-bezier(.16,1.1,.45,.98),
-    background 0.18s,
-    border 0.22s,
-    box-shadow 0.3s;
+  transition: transform 0.35s cubic-bezier(.16,1.1,.45,.98),
+              background 0.18s, border 0.22s, box-shadow 0.3s;
   position: relative;
   z-index: 1;
 }
@@ -80,76 +68,89 @@ body {
   transform: translateY(-10px) scale(1.05);
   background: rgba(53, 25, 110, 0.71);
   border: 1.7px solid rgba(200,180,255,0.23);
-  box-shadow:
-    0 10px 40px 0 rgba(210, 80, 255, 0.20),
-    0 0px 18px 4px rgba(169,123,255,0.17),
-    0 1.5px 14px 0 rgba(230,200,255,0.09);
+  box-shadow: 0 10px 40px 0 rgba(210, 80, 255, 0.20), 
+              0 0px 18px 4px rgba(169,123,255,0.17),
+              0 1.5px 14px 0 rgba(230,200,255,0.09);
   z-index: 2;
 }
 .glass-skill img {
-  width: 3.4rem;
-  height: 3.4rem;
-  margin-bottom: 0.5rem;
-  border-radius: 0.7rem;
+  width: 3.4rem; height: 3.4rem; margin-bottom: 0.5rem; border-radius: 0.7rem;
   transition: filter 0.3s;
 }
 .glass-skill:hover img {
   filter: drop-shadow(0 0 18px #de4fcf80) drop-shadow(0 0 9px #8eb6f7a1);
 }
 
-#about {
-  position: relative;
-  overflow: hidden;
-}
+/* === About Section Canvas === */
+#about { position: relative; overflow: hidden; }
 .about-celestial-canvas {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  z-index: 0;
-  pointer-events: none;
-  display: block;
-  background: transparent;
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 0; pointer-events: none; display: block; background: transparent;
 }
+
+/* === NAVBAR STYLES === */
+
+/* Main desktop nav bar: visible only at md+ */
+header { display: none; }
+@media (min-width: 768px) {
+  header { display: flex !important; }
+}
+
+/* Desktop nav button styles */
 .nav-btn {
+  min-width: 110px;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.7rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: transparent;
+  box-shadow: none;
   transition:
     background 0.20s cubic-bezier(0.4,0,0.2,1),
     color 0.20s cubic-bezier(0.4,0,0.2,1),
     transform 0.13s cubic-bezier(0.4,0,0.2,1),
     box-shadow 0.14s;
-  min-width: 110px;
-  text-align: center;
-  cursor: pointer;
-  background: transparent;
-  box-shadow: none;
 }
-
 .nav-btn:hover, .nav-btn:focus-visible {
-  background: rgba(203,44,201, 0.10); /* Simple semi-transparent fill */
-  color: #f9a8d4;                     /* Soft pink */
+  background: rgba(203,44,201, 0.10);
+  color: #f9a8d4;
   transform: scale(1.05) translateY(-2px);
   box-shadow: 0 4px 18px 0 rgba(203,44,201,0.07);
 }
-
 .nav-btn:active {
-  background: rgba(203,44,201, 0.18); /* Slightly less transparent on click */
+  background: rgba(203,44,201, 0.18);
   color: #fff;
   transform: scale(0.97) translateY(1px);
   box-shadow: 0 2px 6px 0 rgba(203,44,201,0.10);
   transition-duration: 0.08s;
 }
 
-  @keyframes fadeInMenu {
-    from { opacity: 0; transform: translateY(-20px);}
-    to { opacity: 1; transform: translateY(0);}
-  }
-/* Mini mobile navbar styles */
+/* Mini Mobile Navbar - only for screens <768px; icons only, always top */
 .mini-mobile-nav {
   height: 3.25rem;
   font-size: 0.93rem;
   box-shadow: 0 4px 24px 0 rgba(24,16,70,0.11);
   border-radius: 0 0 1.2rem 1.2rem;
-  z-index: 1000; /* Ensure it appears above other content */
-  /* Will appear over content, so ensure top padding for body! */
+  z-index: 100000;
+  background: rgba(15,8,26,0.88);
+  backdrop-filter: blur(14px) saturate(120%);
+  -webkit-backdrop-filter: blur(14px) saturate(120%);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  /* Visible only on mobile */
+  display: flex;
 }
+@media (min-width: 768px) {
+  .mini-mobile-nav { display: none !important; }
+}
+
+/* Hide full nav bar on mobile */
+@media (max-width: 767px) {
+  header { display: none !important; }
+}
+
+/* Mini nav button styles (icons) */
 .mini-nav-btn {
   color: #e0e0e0;
   opacity: 0.88;
@@ -159,6 +160,7 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  z-index: 100001;
 }
 .mini-nav-btn:hover, .mini-nav-btn:focus-visible {
   background: rgba(203,44,201,0.14);
@@ -172,10 +174,7 @@ body {
   color: #fff;
   opacity: 1;
 }
-@media (min-width: 768px) {
-  .mini-mobile-nav { display: none; }
-}
-/* Accessibility: hide text visually but expose to screen readers */
+
 .sr-only {
   position: absolute;
   width: 1px; height: 1px;
@@ -186,7 +185,20 @@ body {
   white-space: nowrap;
   border: 0;
 }
+
+/* Add space below mini nav for mobile */
 body {
-  padding-top: 3.3rem; /* ensure content is not hidden under mini-nav */
+  padding-top: 3.3rem;
 }
 
+/* Responsive hero section (optional, edit for custom needs) */
+@media (max-width: 500px) {
+  .glass-effect { padding: 1.3rem 0.7rem; max-width: 97vw; }
+  .glass-skill {padding-left: 0.09rem; padding-right: 0.09rem;}
+  .glass-skill img { width: 2.8rem; height: 2.8rem;}
+}
+/* Optional: fade-in effect for nav menus */
+@keyframes fadeInMenu {
+  from { opacity: 0; transform: translateY(-20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
