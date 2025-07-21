@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Murtaza | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased">
+
+  <!-- Header -->
+ <!-- Header: Centered, Glassy, Rounded -->
+<!-- Improved Uniform & Animated Navbar -->
+<header class="fixed top-2 left-0 right-0 z-50 flex justify-center pointer-events-none">
+  <nav class="glass-effect pointer-events-auto flex flex-row flex-wrap items-center justify-center gap-5 px-10 py-3 rounded-full shadow-2xl bg-black/30 border border-white/10 backdrop-blur-md">
+    <a href="#home" 
+       class="nav-btn text-lg md:text-xl font-semibold text-white px-6 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 relative overflow-hidden"
+       aria-label="Home">
+      Home
+    </a>
+    <a href="#about"
+       class="nav-btn text-lg md:text-xl font-semibold text-white px-6 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 relative overflow-hidden"
+       aria-label="About">
+      About
+    </a>
+    <a href="#skills"
+       class="nav-btn text-lg md:text-xl font-semibold text-white px-6 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 relative overflow-hidden"
+       aria-label="Skills">
+      Skills
+    </a>
+    <a href="#projects"
+       class="nav-btn text-lg md:text-xl font-semibold text-white px-6 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 relative overflow-hidden"
+       aria-label="Projects">
+      Projects
+    </a>
+    <a href="#contact"
+       class="nav-btn text-lg md:text-xl font-semibold text-white px-6 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 relative overflow-hidden"
+       aria-label="Contact">
+      Contact
+    </a>
+  </nav>
+</header>
+
+<!-- CSS styles for uniform sizing & animated interaction -->
+<style>
+ 
+</style>
+
+
+<main>
+  <!-- Hero Section with 3D Nebula and Glassmorphism -->
+  <section id="home" class="h-screen canvas-section flex flex-col justify-center items-center relative">
+    <canvas id="hero-canvas" class="effect-canvas"></canvas>
+    <div class="content-wrapper h-full flex items-center justify-center text-center">
+      <div class="container mx-auto px-6">
+        <div class="max-w-2xl mx-auto p-10 glass-effect rounded-3xl shadow-2xl flex flex-col items-center">
+          <!-- Your Name with gradient -->
+          <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent mb-3 leading-tight">
+            Muhammad Murtaza
+          </h1>
+          <!-- Typewriter Tagline -->
+          <p class="typewriter text-lg md:text-2xl text-slate-100 max-w-xl mx-auto min-h-[2.4em] font-medium mt-2 mb-6"></p>
+          <!-- Button -->
+          <div class="mt-5 mb-8">
+            <a href="#projects" class="bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 text-white font-bold py-4 px-10 rounded-full text-xl hover:scale-110 hover:shadow-2xl transition-all duration-300 shadow-lg shadow-purple-500/40">
+              Explore My Universe
+            </a>
+          </div>
+          <!-- Socials -->
+            <div class="flex flex-row gap-6 justify-center items-center mt-2">
+            <!-- GitHub -->
+            <a href="https://github.com/Muhammad-Murtaazaa"
+               class="group flex items-center gap-2 text-slate-100 hover:text-pink-400 transition"
+               target="_blank" rel="noopener" aria-label="GitHub">
+              
+              <span class="text-base font-medium">GitHub</span>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/muhammad-murtaza-577381327/"
+               class="group flex items-center gap-2 text-slate-100 hover:text-blue-400 transition"
+               target="_blank" rel="noopener" aria-label="LinkedIn">
+              
+              <span class="text-base font-medium">LinkedIn</span>
+            </a>
+            <!-- Email -->
+            <a href="mailto:muhammad.murtaazaa@gmail.com"
+               class="group flex items-center gap-2 text-slate-100 hover:text-pink-400 transition"
+               target="_blank" rel="noopener" aria-label="Email">
+             
+              <span class="text-base font-medium">Email</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+
+    <!-- About Section -->
+   <!-- About Section -->
+<!-- ABOUT SECTION WITH ANIMATED BLOBS BACKGROUND -->
+<section id="about" class="py-28 lg:py-44 bg-gradient-to-br from-[#1a1333] via-[#0a0b15] to-[#1a1333] relative overflow-hidden">
+  
+  
+  <div class="container mx-auto px-6 grid md:grid-cols-5 gap-20 lg:gap-28 xl:gap-32 items-center relative z-10">
+    <!-- Profile Picture Card -->
+    <div class="md:col-span-2 flex flex-col items-center fade-in-section">
+      <div class="relative w-fit">
+        <img src="assets/Airbrush-AI_CLOTHES_CHANGER-2025-07-21T05_50_11-1753077011006-removebg-preview.png" 
+             alt="Portrait of Muhammad Murtaza" 
+             class="rounded-full shadow-2xl shadow-purple-500/30 border-8 border-white/10 bg-white/10 transition-transform duration-300 hover:scale-105 hover:shadow-indigo-500/20" />
+        <!-- Animated Particle Overlay (optional) -->
+        <div class="absolute inset-0 pointer-events-none"></div>
+      </div>
+      <div class="mt-6 text-center space-y-2">
+        <h3 class="text-2xl font-bold text-white tracking-wide">Muhammad Murtaza</h3>
+        <p class="text-indigo-300 font-semibold">Computer Science Student & Aspiring Developer</p>
+      </div>
+    </div>
+
+    <!-- About/Bio + Education/Certifications -->
+    <div class="md:col-span-3 fade-in-section" style="transition-delay: 120ms;">
+      <h2 class="text-4xl lg:text-5xl font-bold text-white mb-7 leading-tight">I Build Digital Worlds</h2>
+      <p class="text-slate-200 text-lg leading-relaxed mb-3">
+       Motivated Computer Science student at the University of Management and Technology with strong skills in programming, web 
+development, database management, and a growing expertise in machine learning. Proven experience in leading group projects 
+and collaborating effectively in team environments. Eager to apply technical knowledge to real-world challenges and 
+continuously expand skill set through hands-on experience
+      </p>
+      <!-- Education Section -->
+      <div class="glass-effect rounded-2xl p-6 mb-6 border border-purple-600/10 shadow-lg bg-white/5 backdrop-blur-sm">
+        <h3 class="text-2xl font-bold text-purple-300 mb-3 tracking-wide flex items-center gap-2">
+          <svg class="inline w-7 h-7 text-pink-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 3L2.4 8.2a2 2 0 0 0 .2 3.5l9.4 5.1a2 2 0 0 0 1.8 0l9.4-5.1a2 2 0 0 0 .2-3.5L12 3z"/><path d="M2 20.9V10c0-.5.3-1 .8-1l8 4.2a2 2 0 0 0 1.6 0l8-4.2c.5 0 .8.5.8 1v10.9c0 .6-.4 1-1 1H3c-.6 0-1-.4-1-1z"/></svg>
+          Education
+        </h3>
+        <ul class="space-y-2 text-lg text-slate-100">
+          <li>
+            <span class="font-bold ">B.Sc. Computer Science</span>
+            <span class="text-slate-400"> — University of Management and Technology, 2023-Present</span>
+          </li>
+          <li>
+            <span class="font-bold ">Intermediate in Pre-Engineering</span>
+            <span class="text-slate-400"> — Punjab College, 2021–2023</span>
+          </li>
+          <li>
+            <span class="font-bold ">Matriculation in Science</span>
+            <span class="text-slate-400"> — Lahore Grammar School, 2019–2021</span>
+          </li>
+        </ul>
+      </div>
+      <!-- Certifications Section -->
+      <div class="glass-effect rounded-2xl p-6 border border-purple-600/10 shadow-lg bg-white/5 backdrop-blur-sm">
+        <h3 class="text-2xl font-bold text-purple-300 mb-3 tracking-wide flex items-center gap-2">
+          <svg class="inline w-7 h-7 text-green-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 17.3l6.18 3.7-1.64-7.03L21 9.24l-7.19-.61L12 2 10.19 8.63 3 9.24l5.46 4.73L6.82 21z"/></svg>
+          Certifications
+        </h3>
+        <ul class="space-y-2 text-lg text-slate-100">
+          <li>
+            <span class="font-bold ">The Origins I: HTML</span>
+            <span class="text-slate-400"> — <span class="italic"> Codédex , March 2025</span></span>
+          </li>
+          <li>
+            <span class="font-bold ">The Origins II: CSS</span>
+            <span class="text-slate-400"> — <span class="italic">Codédex , March 2025</span></span>
+          </li>
+            <li>
+            <span class="font-bold ">The Origins III: JavaScript</span>
+            <span class="text-slate-400"> — <span class="italic">Codédex , March 2025</span></span>
+          </li>
+            <li>
+            <span class="font-bold ">Microsoft Office: Word 2019</span>
+            <span class="text-slate-400"> — <span class="italic">Microsoft Office Specialist: Word Associate</span></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Skills Section with Energy Field -->
+ <section id="skills" class="py-24 lg:py-40 canvas-section relative bg-gradient-to-tr from-[#191924] to-[#0a0b15] overflow-hidden">
+  <canvas id="skills-canvas" class="effect-canvas absolute inset-0 pointer-events-none"></canvas>
+  <div class="content-wrapper container mx-auto px-6 relative z-10">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl lg:text-5xl font-bold text-indigo-200 drop-shadow-lg mb-3 fade-in-section">
+        Core Technologies
+      </h2>
+      <p class="text-slate-300 text-lg max-w-2xl mx-auto fade-in-section" style="transition-delay:150ms;">
+        The fundamental forces powering my creations.
+      </p>
+    </div>
+    <!-- Responsive Static Grid: 2-4 cols, max 2 rows -->
+    <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12">
+      <!-- C -->
+      <div class="fade-in-section group glass-skill flex flex-col items-center bg-white/10 backdrop-blur-md shadow-md rounded-2xl py-6 transition-all duration-300 hover:scale-105 hover:shadow-indigo-400/20">
+        <img src="https://skillicons.dev/icons?i=c" alt="C" class="w-16 h-16 mx-auto mb-2">
+        <p class="font-bold text-xl text-white">C</p>
+      </div>
+      <!-- C++ -->
+      <div class="fade-in-section group glass-skill flex flex-col items-center bg-white/10 backdrop-blur-md shadow-md rounded-2xl py-6 transition-all duration-300 hover:scale-105 hover:shadow-blue-400/20">
+        <img src="https://skillicons.dev/icons?i=cpp" alt="C++" class="w-16 h-16 mx-auto mb-2">
+        <p class="font-bold text-xl text-white">C++</p>
+      </div>
+      <!-- HTML -->
+      <div class="fade-in-section group glass-skill flex flex-col items-center bg-white/10 backdrop-blur-md shadow-md rounded-2xl py-6 transition-all duration-300 hover:scale-105 hover:shadow-orange-400/20">
+        <img src="https://skillicons.dev/icons?i=html" alt="HTML" class="w-16 h-16 mx-auto mb-2">
+        <p class="font-bold text-xl text-white">HTML</p>
+      </div>
+      <!-- CSS -->
+      <div class="fade-in-section group glass-skill flex flex-col items-center bg-white/10 backdrop-blur-md shadow-md rounded-2xl py-6 transition-all duration-300 hover:scale-105 hover:shadow-blue-300/20">
+        <img src="https://skillicons.dev/icons?i=css" alt="CSS" class="w-16 h-16 mx-auto mb-2">
+        <p class="font-bold text-xl text-white">CSS</p>
+      </div>
+      <!-- JavaScript -->
+      <div class="fade-in-section group glass-skill flex flex-col items-center bg-white/10 backdrop-blur-md shadow-md rounded-2xl py-6 transition-all duration-300 hover:scale-105 hover:shadow-yellow-300/20">
+        <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" class="w-16 h-16 mx-auto mb-2">
+        <p class="font-bold text-xl text-white">JavaScript</p>
+      </div>
+      <!-- Bootstrap -->
+      <div class="fade-in-section group glass-skill flex flex-col items-center bg-white/10 backdrop-blur-md shadow-md rounded-2xl py-6 transition-all duration-300 hover:scale-105 hover:shadow-purple-300/20">
+        <img src="https://skillicons.dev/icons?i=bootstrap" alt="Bootstrap" class="w-16 h-16 mx-auto mb-2">
+        <p class="font-bold text-xl text-white">Bootstrap</p>
+      </div>
+      <!-- Tailwind CSS -->
+      <div class="fade-in-section group glass-skill flex flex-col items-center bg-white/10 backdrop-blur-md shadow-md rounded-2xl py-6 transition-all duration-300 hover:scale-105 hover:shadow-sky-300/20">
+        <img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind CSS" class="w-16 h-16 mx-auto mb-2">
+        <p class="font-bold text-xl text-white">Tailwind CSS</p>
+      </div>
+      <!-- React -->
+      <div class="fade-in-section group glass-skill flex flex-col items-center bg-white/10 backdrop-blur-md shadow-md rounded-2xl py-6 transition-all duration-300 hover:scale-105 hover:shadow-cyan-400/20">
+        <img src="https://skillicons.dev/icons?i=react" alt="React" class="w-16 h-16 mx-auto mb-2">
+        <p class="font-bold text-xl text-white">React</p>
+      </div>
+      <!-- Node.js -->
+      <div class="fade-in-section group glass-skill flex flex-col items-center bg-white/10 backdrop-blur-md shadow-md rounded-2xl py-6 transition-all duration-300 hover:scale-105 hover:shadow-green-400/20">
+        <img src="https://skillicons.dev/icons?i=nodejs" alt="Node.js" class="w-16 h-16 mx-auto mb-2">
+        <p class="font-bold text-xl text-white">Node.js</p>
+      </div>
+      <!-- Express -->
+      <div class="fade-in-section group glass-skill flex flex-col items-center bg-white/10 backdrop-blur-md shadow-md rounded-2xl py-6 transition-all duration-300 hover:scale-105 hover:shadow-gray-400/20">
+        <img src="https://skillicons.dev/icons?i=express" alt="Express" class="w-16 h-16 mx-auto mb-2 bg-white rounded-lg p-1">
+        <p class="font-bold text-xl text-white">Express</p>
+      </div>
+      <!-- MySQL -->
+      <div class="fade-in-section group glass-skill flex flex-col items-center bg-white/10 backdrop-blur-md shadow-md rounded-2xl py-6 transition-all duration-300 hover:scale-105 hover:shadow-blue-200/20">
+        <img src="https://skillicons.dev/icons?i=mysql" alt="MySQL" class="w-16 h-16 mx-auto mb-2">
+        <p class="font-bold text-xl text-white">MySQL</p>
+      </div>
+      <!-- MongoDB -->
+      <div class="fade-in-section group glass-skill flex flex-col items-center bg-white/10 backdrop-blur-md shadow-md rounded-2xl py-6 transition-all duration-300 hover:scale-105 hover:shadow-lime-400/20">
+        <img src="https://skillicons.dev/icons?i=mongodb" alt="MongoDB" class="w-16 h-16 mx-auto mb-2">
+        <p class="font-bold text-xl text-white">MongoDB</p>
+      </div>
+      <!-- Git -->
+      <div class="fade-in-section group glass-skill flex flex-col items-center bg-white/10 backdrop-blur-md shadow-md rounded-2xl py-6 transition-all duration-300 hover:scale-105 hover:shadow-orange-400/20">
+        <img src="https://skillicons.dev/icons?i=git" alt="Git" class="w-16 h-16 mx-auto mb-2">
+        <p class="font-bold text-xl text-white">Git</p>
+      </div>
+      <!-- GitHub -->
+      <div class="fade-in-section group glass-skill flex flex-col items-center bg-white/10 backdrop-blur-md shadow-md rounded-2xl py-6 transition-all duration-300 hover:scale-105 hover:shadow-slate-200/20">
+        <img src="https://skillicons.dev/icons?i=github" alt="GitHub" class="w-16 h-16 mx-auto mb-2">
+        <p class="font-bold text-xl text-white">GitHub</p>
+      </div>
+      <!-- Vercel -->
+      <div class="fade-in-section group glass-skill flex flex-col items-center bg-white/10 backdrop-blur-md shadow-md rounded-2xl py-6 transition-all duration-300 hover:scale-105 hover:shadow-black/20">
+        <img src="https://skillicons.dev/icons?i=vercel" alt="Vercel" class="w-16 h-16 mx-auto mb-2 bg-white rounded-lg p-1">
+        <p class="font-bold text-xl text-white">Vercel</p>
+      </div>
+      <!-- Python -->
+      <div class="fade-in-section group glass-skill flex flex-col items-center bg-white/10 backdrop-blur-md shadow-md rounded-2xl py-6 transition-all duration-300 hover:scale-105 hover:shadow-yellow-200/20">
+        <img src="https://skillicons.dev/icons?i=python" alt="Python" class="w-16 h-16 mx-auto mb-2">
+        <p class="font-bold text-xl text-white">Python</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+    <!-- Projects Section with Realistic Aurora -->
+<!-- Projects Section with Glassmorphism Cards, Icons, and Responsive Grid -->
+<section id="projects" class="py-24 lg:py-40 canvas-section relative bg-gradient-to-br from-[#191924] to-[#0a0b15] overflow-hidden">
+  <!-- Animated Canvas Background (enhance via JS if desired) -->
+  <canvas id="projects-canvas" class="effect-canvas absolute inset-0 pointer-events-none"></canvas>
+
+  <div class="content-wrapper container mx-auto px-6 relative z-10">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl lg:text-5xl font-bold text-indigo-200 drop-shadow-lg mb-3 fade-in-section">
+        Featured Constellations
+      </h2>
+      <p class="text-slate-300 text-lg max-w-2xl mx-auto fade-in-section" style="transition-delay:150ms;">
+        A selection of projects where I've translated vision into reality.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Project 1: Weather App -->
+      <div class="glass-effect bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl overflow-hidden fade-in-section shadow-2xl hover:-translate-y-3 hover:scale-105 transition-transform duration-300 flex flex-col min-h-[480px]">
+        <img src="https://placehold.co/600x400/8A3A7E/FFFFFF?text=Weather+App&font=Playfair Display"
+          alt="Screenshot of Weather App interface"
+          class="w-full h-56 object-cover rounded-t-2xl" loading="lazy" />
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-2xl font-semibold text-white mb-1 flex items-center gap-2">
+            Weather App
+            <span class="ml-2 px-2 py-0.5 text-xs bg-gradient-to-r from-green-400 to-blue-400 text-white shadow-sm rounded">
+              HTML • CSS • JS
+            </span>
+          </h3>
+          <p class="text-slate-300 mb-6 flex-1">
+            A simple and responsive Weather App built with HTML, CSS, and JavaScript.<br>
+            Fetches real-time data, displays temperature, conditions, and much more.
+          </p>
+          <div class="flex gap-3 mt-auto">
+            <a href="https://muhammad-murtaazaa.github.io/Weather-App/" target="_blank" rel="noopener"
+               class="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-green-400 via-teal-500 to-blue-500 text-white py-2 px-4 rounded-lg font-semibold hover:scale-105 hover:shadow-2xl transition-all duration-200 focus:outline focus:ring-2 focus:ring-sky-400"
+               aria-label="Live Weather App">
+              <svg class="w-5 h-5" viewBox="0 0 24 24"><use href="#link-out"></use></svg>
+              Live Site
+            </a>
+            <a href="https://github.com/Muhammad-Murtaazaa/Weather-App" target="_blank" rel="noopener"
+               class="flex-1 flex items-center justify-center gap-2 bg-black/80 text-white py-2 px-4 rounded-lg font-semibold hover:bg-black hover:scale-105 hover:shadow-2xl transition-all duration-200 focus:outline focus:ring-2 focus:ring-slate-400"
+               aria-label="GitHub repository for Weather App">
+              <svg class="w-5 h-5" viewBox="0 0 24 24"><use href="#github"></use></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: Pixel Pomodoro -->
+      <div class="glass-effect bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl overflow-hidden fade-in-section shadow-2xl hover:-translate-y-3 hover:scale-105 transition-transform duration-300 flex flex-col min-h-[480px]" style="transition-delay:100ms;">
+        <img src="https://placehold.co/600x400/3A185D/FFFFFF?text=Pixel+Pomodoro&font=Playfair Display"
+          alt="Screenshot of Pixel Pomodoro app"
+          class="w-full h-56 object-cover rounded-t-2xl" loading="lazy" />
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-2xl font-semibold text-white mb-1 flex items-center gap-2">
+            Pixel Pomodoro
+            <span class="ml-2 px-2 py-0.5 text-xs bg-gradient-to-r from-pink-400 to-indigo-400 text-white shadow-sm rounded">
+              HTML • CSS • JS
+            </span>
+          </h3>
+          <p class="text-slate-300 mb-6 flex-1">
+            A productivity timer using the Pomodoro technique; manage work & breaks with playful pixel art.
+          </p>
+          <div class="flex gap-3 mt-auto">
+            <a href="https://unrivaled-manatee-5ab30c.netlify.app/" target="_blank" rel="noopener"
+               class="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white py-2 px-4 rounded-lg font-semibold hover:scale-105 hover:shadow-2xl transition-all duration-200 focus:outline focus:ring-2 focus:ring-pink-300"
+               aria-label="Live Pixel Pomodoro App">
+              <svg class="w-5 h-5" viewBox="0 0 24 24"><use href="#link-out"></use></svg>
+              Live Site
+            </a>
+            <a href="https://github.com/Muhammad-Murtaazaa/Pixel-Pomodoro" target="_blank" rel="noopener"
+               class="flex-1 flex items-center justify-center gap-2 bg-black/80 text-white py-2 px-4 rounded-lg font-semibold hover:bg-black hover:scale-105 hover:shadow-2xl transition-all duration-200 focus:outline focus:ring-2 focus:ring-slate-400"
+               aria-label="Pixel Pomodoro GitHub">
+              <svg class="w-5 h-5" viewBox="0 0 24 24"><use href="#github"></use></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: Motiva Dash -->
+      <div class="glass-effect bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl overflow-hidden fade-in-section shadow-2xl hover:-translate-y-3 hover:scale-105 transition-transform duration-300 flex flex-col min-h-[480px]" style="transition-delay:200ms;">
+        <img src="https://placehold.co/600x400/E05263/FFFFFF?text=Motiva+Dash&font=Playfair Display"
+          alt="Screenshot of Motiva Dash dashboard"
+          class="w-full h-56 object-cover rounded-t-2xl" loading="lazy" />
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-2xl font-semibold text-white mb-1 flex items-center gap-2">
+            Motiva Dash
+            <span class="ml-2 px-2 py-0.5 text-xs bg-gradient-to-r from-yellow-400 to-pink-400 text-white shadow-sm rounded">
+              HTML • JS • CSS • Nodejs • Express • MongoDB
+            </span>
+          </h3>
+          <p class="text-slate-300 mb-6 flex-1">
+            A motivational dashboard showing quotes, uplifting images, and your own goals in one place.
+          </p>
+          <div class="flex gap-3 mt-auto">
+            <a href="https://muhammad-murtaazaa.github.io/MotivaDash/login.html" target="_blank" rel="noopener"
+               class="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-yellow-400 via-pink-500 to-red-500 text-white py-2 px-4 rounded-lg font-semibold hover:scale-105 hover:shadow-2xl transition-all duration-200 focus:outline focus:ring-2 focus:ring-pink-300"
+               aria-label="Motiva Dash Live">
+              <svg class="w-5 h-5" viewBox="0 0 24 24"><use href="#link-out"></use></svg>
+              Live Site
+            </a>
+            <a href="https://github.com/Muhammad-Murtaazaa/MotivaDash" target="_blank" rel="noopener"
+               class="flex-1 flex items-center justify-center gap-2 bg-black/80 text-white py-2 px-4 rounded-lg font-semibold hover:bg-black hover:scale-105 hover:shadow-2xl transition-all duration-200 focus:outline focus:ring-2 focus:ring-slate-400"
+               aria-label="Motiva Dash GitHub">
+              <svg class="w-5 h-5" viewBox="0 0 24 24"><use href="#github"></use></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4: POS in Cpp -->
+      <div class="glass-effect bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl overflow-hidden fade-in-section shadow-2xl hover:-translate-y-3 hover:scale-105 transition-transform duration-300 flex flex-col min-h-[480px]" style="transition-delay:300ms;">
+        <img src="https://placehold.co/600x400/322245/FFFFFF?text=POS+in+Cpp&font=Playfair Display"
+          alt="Screenshot or cover for POS in C++"
+          class="w-full h-56 object-cover rounded-t-2xl" loading="lazy" />
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-2xl font-semibold text-white mb-1 flex items-center gap-2">
+            POS in C++
+            <span class="ml-2 px-2 py-0.5 text-xs bg-gradient-to-r from-blue-700 to-purple-800 text-white shadow-sm rounded">
+              C++
+            </span>
+          </h3>
+          <p class="text-slate-300 mb-6 flex-1">A point of sale application in C++ for managing sales, inventory, and customer data, right from your terminal.</p>
+          <div class="flex gap-3 mt-auto">
+            <a href="https://github.com/Muhammad-Murtaazaa/Automated-POS" target="_blank" rel="noopener"
+               class="flex-1 flex items-center justify-center gap-2 bg-black/80 text-white py-2 px-4 rounded-lg font-semibold hover:bg-black hover:scale-105 hover:shadow-2xl transition-all duration-200 focus:outline focus:ring-2 focus:ring-slate-400"
+               aria-label="POS in C++ GitHub">
+              <svg class="w-5 h-5" viewBox="0 0 24 24"><use href="#github"></use></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5: Worst Captcha -->
+      <div class="glass-effect bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl overflow-hidden fade-in-section shadow-2xl hover:-translate-y-3 hover:scale-105 transition-transform duration-300 flex flex-col min-h-[480px]" style="transition-delay:400ms;">
+        <img src="https://placehold.co/600x400/62404B/FFFFFF?text=Worst+Captcha&font=Playfair Display"
+          alt="Screenshot of Worst Captcha challenge"
+          class="w-full h-56 object-cover rounded-t-2xl" loading="lazy" />
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-2xl font-semibold text-white mb-1 flex items-center gap-2">
+            Worst Captcha
+            <span class="ml-2 px-2 py-0.5 text-xs bg-gradient-to-r from-red-700 to-yellow-400 text-white shadow-sm rounded">
+              HTML • JS • CSS
+            </span>
+          </h3>
+          <p class="text-slate-300 mb-6 flex-1">
+            A fun twist on captchas—turning annoying bot tests into a bizarre, entertaining puzzle game!
+          </p>
+          <div class="flex gap-3 mt-auto">
+            <a href="https://www.codedex.io/S8VzJwnnvLUlaJkntckd/live" target="_blank" rel="noopener"
+               class="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-yellow-400 via-pink-500 to-red-400 text-white py-2 px-4 rounded-lg font-semibold hover:scale-105 hover:shadow-2xl transition-all duration-200 focus:outline focus:ring-2 focus:ring-pink-300"
+               aria-label="Worst Captcha Live">
+              <svg class="w-5 h-5" viewBox="0 0 24 24"><use href="#link-out"></use></svg>
+              Live Site
+            </a>
+            <a href="https://github.com/Muhammad-Murtaazaa/Worst-CAPTCHA" target="_blank" rel="noopener"
+               class="flex-1 flex items-center justify-center gap-2 bg-black/80 text-white py-2 px-4 rounded-lg font-semibold hover:bg-black hover:scale-105 hover:shadow-2xl transition-all duration-200 focus:outline focus:ring-2 focus:ring-slate-400"
+               aria-label="Worst Captcha GitHub">
+              <svg class="w-5 h-5" viewBox="0 0 24 24"><use href="#github"></use></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6: Tic Tac Toe in Cpp -->
+      <div class="glass-effect bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl overflow-hidden fade-in-section shadow-2xl hover:-translate-y-3 hover:scale-105 transition-transform duration-300 flex flex-col min-h-[480px]" style="transition-delay:500ms;">
+        <img src="https://placehold.co/600x400/324053/FFFFFF?text=Tic+Tac+Toe+in+Cpp&font=Playfair Display"
+          alt="Screenshot of Tic Tac Toe in C++"
+          class="w-full h-56 object-cover rounded-t-2xl" loading="lazy" />
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-2xl font-semibold text-white mb-1 flex items-center gap-2">
+            Tic Tac Toe in C++
+            <span class="ml-2 px-2 py-0.5 text-xs bg-gradient-to-r from-blue-700 to-purple-800 text-white shadow-sm rounded">
+              C++
+            </span>
+          </h3>
+          <p class="text-slate-300 mb-6 flex-1">
+            A simple terminal Tic Tac Toe game in C++—old-school fun, modern code.
+          </p>
+          <div class="flex gap-3 mt-auto">
+            <a href="https://github.com/Muhammad-Murtaazaa/Tic-Tac-Toe-in-cpp" target="_blank" rel="noopener"
+               class="flex-1 flex items-center justify-center gap-2 bg-black/80 text-white py-2 px-4 rounded-lg font-semibold hover:bg-black hover:scale-105 hover:shadow-2xl transition-all duration-200 focus:outline focus:ring-2 focus:ring-slate-400"
+               aria-label="Tic Tac Toe C++ GitHub">
+              <svg class="w-5 h-5" viewBox="0 0 24 24"><use href="#github"></use></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SVG Sprites for Link & GitHub -->
+  <svg style="display:none;">
+    <symbol id="link-out" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M17 7h2a2 2 0 012 2v10a2 2 0 01-2 2H7a2 2 0 01-2-2V7a2 2 0 012-2h2"/>
+      <polyline stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="10 14 21 3"/>
+      <polyline stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="21 3 21 10"/>
+      <polyline stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="21 3 14 3"/>
+    </symbol>
+    <symbol id="github" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12,0.5C5.647,0.5,0.5,5.647,0.5,12c0,5.081,3.292,9.388,7.865,10.89c0.575,0.106,0.785-0.25,0.785-0.555 c0-0.274-0.011-1.171-0.016-2.123c-3.201,0.696-3.879-1.543-3.879-1.543c-0.523-1.329-1.277-1.683-1.277-1.683 c-1.044-0.714,0.08-0.7,0.08-0.7c1.154,0.081,1.76,1.186,1.76,1.186c1.026,1.758,2.693,1.25,3.348,0.957 c0.104-0.743,0.402-1.25,0.73-1.538c-2.555-0.291-5.242-1.278-5.242-5.69c0-1.257,0.441-2.285,1.163-3.09 C4.803,9.133,4.5,8.228,5.11,6.926c0,0,0.967-0.31,3.176,1.179c0.919-0.256,1.906-0.384,2.888-0.388 c0.982,0.004,1.97,0.133,2.889,0.388c2.208-1.489,3.174-1.179,3.174-1.179c0.61,1.302,0.307,2.207,0.15,2.441 c0.724,0.805,1.163,1.833,1.163,3.09c0,4.421-2.689,5.396-5.251,5.682c0.413,0.356,0.78,1.062,0.78,2.142 c0,1.547-0.014,2.797-0.014,3.179c0,0.308,0.207,0.665,0.791,0.552C20.209,21.387,23.5,17.081,23.5,12 C23.5,5.647,18.353,0.5,12,0.5z"/>
+    </symbol>
+  </svg>
+</section>
+
+
+
+ <section id="contact" class="py-24 lg:py-40">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-4xl lg:text-5xl font-bold text-white mb-4 fade-in-section">Let's Connect</h2>
+    <p class="text-slate-300 text-lg max-w-2xl mx-auto mb-12 fade-in-section" style="transition-delay: 150ms;">
+      Have an ambitious project or a revolutionary idea? I'm always excited to discuss new possibilities. Let's start a conversation.
+    </p>
+    <div class="max-w-xl mx-auto fade-in-section" style="transition-delay: 300ms;">
+      <form
+        id="contact-form"
+        action="https://formspree.io/f/mblkdqrz"
+        method="POST"
+        class="glass-effect rounded-2xl p-8 flex flex-col gap-6 bg-white/10 backdrop-blur-md border border-white/10 shadow-xl"
+      >
+        <div class="flex flex-col text-left gap-2">
+          <label for="email" class="font-semibold text-white">Your Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            class="rounded-lg py-3 px-4 bg-slate-900/70 text-white focus:ring-2 focus:ring-pink-400 outline-none border border-white/10 transition"
+            autocomplete="email"
+          />
+        </div>
+        <div class="flex flex-col text-left gap-2">
+          <label for="message" class="font-semibold text-white">Your Message</label>
+          <textarea
+            name="message"
+            id="message"
+            rows="5"
+            required
+            class="rounded-lg py-3 px-4 bg-slate-900/70 text-white focus:ring-2 focus:ring-pink-400 outline-none border border-white/10 transition"
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-pink-600 text-white font-bold py-4 px-10 rounded-full text-xl hover:bg-pink-500 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-pink-500/40 focus:ring-2 focus:ring-pink-400 outline-none"
+        >
+          Send
+        </button>
+      </form>
+      <!-- Toast Notification -->
+      <div id="contact-toast" class="hidden fixed bottom-12 left-1/2 z-50 px-4 py-2 rounded text-sm font-semibold shadow-lg text-white bg-green-600 transform -translate-x-1/2 text-center transition-all duration-200"></div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+// Email format validation regex (simple version)
+function isValidEmail(email) {
+  return /^[\w-\.]+@([\w-]+\.)+[\w-]{2,}$/.test(email);
+}
+
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const emailInput = form.querySelector('input[name="email"]');
+  const messageInput = form.querySelector('textarea[name="message"]');
+  const email = emailInput.value.trim();
+  const message = messageInput.value.trim();
+
+  // Validation
+  if (!isValidEmail(email)) {
+    showToast('Please enter a valid email address.', true);
+    emailInput.focus();
+    return;
+  }
+  if (message.length === 0) {
+    showToast('Message cannot be empty.', true);
+    messageInput.focus();
+    return;
+  }
+
+  const data = new FormData(form);
+
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (res.ok) {
+      form.reset();
+      showToast('Message sent successfully!');
+    } else {
+      showToast('Something went wrong. Please try again.', true);
+    }
+  } catch (err) {
+    showToast('Network error. Please try again.', true);
+  }
+});
+
+function showToast(msg, error) {
+  const toast = document.getElementById('contact-toast');
+  toast.textContent = msg;
+  toast.className =
+    'fixed bottom-0 left-1/2 z-50 px-4 py-2 rounded text-sm font-semibold shadow-lg text-white transition-all duration-200 ' +
+    (error ? 'bg-red-600' : 'bg-green-600') +
+    ' transform -translate-x-1/2 text-center';
+  toast.style.display = 'block';
+  toast.style.opacity = '1';
+
+  // Show for a very short period (1.2 seconds)
+  setTimeout(() => {
+    toast.style.opacity = '0';
+    setTimeout(() => {
+      toast.style.display = 'none';
+    }, 200); // matches the transition
+  }, 1200); // very quick display!
+}
+
+
+
+</script>
+
+
+<!-- Glassy Animated Footer -->
+<footer class="glass-effect bg-white/10 backdrop-blur-xl border-t border-white/10 mt-16 shadow-2xl">
+  <div class="container mx-auto px-6 py-8 text-center text-slate-200">
+    <p class="flex items-center justify-center gap-2 text-lg font-semibold animate-footer-fade">
+      <span class="footer-typewriter">
+        Made with
+      </span>
+      <span class="inline-block animate-glow-heart">
+        <span class="text-red-400 drop-shadow-glow-heart text-xl">❤️</span>
+      </span>
+      &
+      <span class="inline-block animate-glow-coffee">
+        <span class="text-amber-300 drop-shadow-glow-coffee text-xl">☕</span>
+      </span>
+      <span class="footer-typewriter">by Muhammad Murtaza.</span>
+    </p>
+  </div>
+</footer>
+
+<style>
+/* Glass effect for footer */
+footer.glass-effect {
+  background: rgba(28, 22, 44, 0.35);
+  backdrop-filter: blur(18px) saturate(155%) brightness(1.02);
+  box-shadow: 0 8px 48px 0 rgba(80, 8, 204, 0.07);
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+}
+
+/* Glowing Heart Effect */
+@keyframes glow-heart {
+  0%, 100% {
+    filter: drop-shadow(0 0 7px #ff6b97) drop-shadow(0 0 19px #ffbcd6);
+  }
+  50% {
+    filter: drop-shadow(0 0 21px #ff2972) drop-shadow(0 0 30px #ffc2e1);
+  }
+}
+.animate-glow-heart .drop-shadow-glow-heart {
+  animation: glow-heart 1.5s infinite;
+}
+
+/* Glowing Coffee Effect */
+@keyframes glow-coffee {
+  0%, 100% {
+    filter: drop-shadow(0 0 4px #fbbf24) drop-shadow(0 0 10px #ffd166);
+  }
+  50% {
+    filter: drop-shadow(0 0 13px #eab308) drop-shadow(0 0 20px #fff7a3);
+  }
+}
+.animate-glow-coffee .drop-shadow-glow-coffee {
+  animation: glow-coffee 1.7s infinite;
+}
+
+/* Footer Text Animation: smooth fade+slide in */
+@keyframes footer-fade {
+  0%   { opacity: 0; transform: translateY(20px);}
+  70%  { opacity: 1; transform: translateY(-6px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+.animate-footer-fade {
+  animation: footer-fade 0.9s cubic-bezier(.18,.8,.47,1) 0.15s both;
+}
+
+
+
+/* Responsive - footer text smaller on mobile */
+@media (max-width: 480px) {
+  footer.glass-effect .text-lg { font-size: 1rem; }
+  footer.glass-effect { border-radius: 18px 18px 0 0; }
+}
+</style>
+
+  <script src="main.js"></script>
+  <script src="Typewiter.js"></script>
+</body>
+</html>

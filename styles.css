@@ -1,0 +1,138 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #02000a;
+    color: #e0e0e0;
+    overflow-x: hidden;
+}
+.glass-effect {
+  background: rgba(30, 16, 70, 0.45);
+  backdrop-filter: blur(22px) saturate(180%);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  border: 1.5px solid rgba(200, 180, 255, 0.18);
+  box-shadow: 0 8px 40px 0 rgba(124, 58, 237, 0.13), 0 1.5px 10px 0 rgba(255,255,255,0.05);
+  transition: background 0.4s, border 0.4s, box-shadow 0.4s, transform 0.4s;
+}
+
+/* --- General Glassmorphism --- */
+
+.glass-effect:hover {
+    transform: translateY(-8px) scale(1.03);
+    background: rgba(30, 16, 70, 0.57);
+    border: 1.5px solid rgba(200, 180, 255, 0.32);
+    box-shadow: 0 12px 60px 0 rgba(190, 75, 255, 0.22);
+}
+
+/* --- Animation Canvases --- */
+.effect-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+#hero-canvas { z-index: 0; }
+#skills-canvas { z-index: 0; opacity: 0.7; }
+#projects-canvas { z-index: 0; opacity: 0.9; }
+
+.canvas-section {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* --- Content Styling --- */
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+/* Fade-in Animation */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.glass-skill {
+  background: rgba(30, 16, 70, 0.47);
+  backdrop-filter: blur(16px) saturate(170%);
+  -webkit-backdrop-filter: blur(16px) saturate(170%);
+  border-radius: 1.3rem;
+  border: 1.3px solid rgba(200, 180, 255, 0.12);
+  box-shadow: 0 4.5px 24px 0 rgba(124, 58, 237, 0.11), 0 1.5px 10px 0 rgba(255,255,255,0.04);
+  padding-top: 1.3rem;
+  padding-bottom: .8rem;
+  padding-left: .3rem;
+  padding-right: .3rem;
+  transition:
+    transform 0.35s cubic-bezier(.16,1.1,.45,.98),
+    background 0.18s,
+    border 0.22s,
+    box-shadow 0.3s;
+  position: relative;
+  z-index: 1;
+}
+.glass-skill:hover, .glass-skill:focus-visible {
+  transform: translateY(-10px) scale(1.05);
+  background: rgba(53, 25, 110, 0.71);
+  border: 1.7px solid rgba(200,180,255,0.23);
+  box-shadow:
+    0 10px 40px 0 rgba(210, 80, 255, 0.20),
+    0 0px 18px 4px rgba(169,123,255,0.17),
+    0 1.5px 14px 0 rgba(230,200,255,0.09);
+  z-index: 2;
+}
+.glass-skill img {
+  width: 3.4rem;
+  height: 3.4rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.7rem;
+  transition: filter 0.3s;
+}
+.glass-skill:hover img {
+  filter: drop-shadow(0 0 18px #de4fcf80) drop-shadow(0 0 9px #8eb6f7a1);
+}
+
+#about {
+  position: relative;
+  overflow: hidden;
+}
+.about-celestial-canvas {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  display: block;
+  background: transparent;
+}
+.nav-btn {
+  transition:
+    background 0.20s cubic-bezier(0.4,0,0.2,1),
+    color 0.20s cubic-bezier(0.4,0,0.2,1),
+    transform 0.13s cubic-bezier(0.4,0,0.2,1),
+    box-shadow 0.14s;
+  min-width: 110px;
+  text-align: center;
+  cursor: pointer;
+  background: transparent;
+  box-shadow: none;
+}
+
+.nav-btn:hover, .nav-btn:focus-visible {
+  background: rgba(203,44,201, 0.10); /* Simple semi-transparent fill */
+  color: #f9a8d4;                     /* Soft pink */
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 4px 18px 0 rgba(203,44,201,0.07);
+}
+
+.nav-btn:active {
+  background: rgba(203,44,201, 0.18); /* Slightly less transparent on click */
+  color: #fff;
+  transform: scale(0.97) translateY(1px);
+  box-shadow: 0 2px 6px 0 rgba(203,44,201,0.10);
+  transition-duration: 0.08s;
+}
