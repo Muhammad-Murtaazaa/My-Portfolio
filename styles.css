@@ -136,3 +136,57 @@ body {
   box-shadow: 0 2px 6px 0 rgba(203,44,201,0.10);
   transition-duration: 0.08s;
 }
+
+  @keyframes fadeInMenu {
+    from { opacity: 0; transform: translateY(-20px);}
+    to { opacity: 1; transform: translateY(0);}
+  }
+/* Mini mobile navbar styles */
+.mini-mobile-nav {
+  height: 3.25rem;
+  font-size: 0.93rem;
+  box-shadow: 0 4px 24px 0 rgba(24,16,70,0.11);
+  border-radius: 0 0 1.2rem 1.2rem;
+  z-index: 1000; /* Ensure it appears above other content */
+  /* Will appear over content, so ensure top padding for body! */
+}
+.mini-nav-btn {
+  color: #e0e0e0;
+  opacity: 0.88;
+  border-radius: 0.8rem;
+  padding: 0.43rem 0.68rem;
+  transition: background 0.13s, color 0.17s, opacity 0.15s, transform 0.16s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.mini-nav-btn:hover, .mini-nav-btn:focus-visible {
+  background: rgba(203,44,201,0.14);
+  color: #f9a8d4;
+  opacity: 1;
+  transform: scale(1.13) translateY(-2px);
+  outline: none;
+}
+.mini-nav-btn:active {
+  background: rgba(203,44,201,0.24);
+  color: #fff;
+  opacity: 1;
+}
+@media (min-width: 768px) {
+  .mini-mobile-nav { display: none; }
+}
+/* Accessibility: hide text visually but expose to screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+body {
+  padding-top: 3.3rem; /* ensure content is not hidden under mini-nav */
+}
+

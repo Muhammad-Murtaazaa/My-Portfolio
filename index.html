@@ -13,86 +13,113 @@
 </head>
 <body class="antialiased">
 
+
+  <!-- Mini Mobile Navbar (with icons only), shown only on phones -->
+<nav class="mini-mobile-nav fixed top-0 left-0 right-0 z-50 flex justify-around items-center p-2 bg-black/80 backdrop-blur-xl border-b border-white/10 md:hidden">
+  <a href="#home" aria-label="Home" class="mini-nav-btn flex flex-col items-center gap-0.5">
+    <svg class="w-6 h-6 mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path d="M3 12l9-9 9 9v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+      <path d="M9 21V9h6v12"/>
+    </svg>
+    <span class="sr-only">Home</span>
+  </a>
+  <a href="#about" aria-label="About" class="mini-nav-btn flex flex-col items-center gap-0.5">
+    <svg class="w-6 h-6 mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <circle cx="12" cy="7" r="4"/>
+      <path d="M5.5 21c.5-4 12.5-4 13 0"/>
+    </svg>
+    <span class="sr-only">About</span>
+  </a>
+  <a href="#skills" aria-label="Skills" class="mini-nav-btn flex flex-col items-center gap-0.5">
+    <svg class="w-6 h-6 mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path d="M10 6L6 12h4l-4 6"/>
+      <path d="M18 6v12"/>
+    </svg>
+    <span class="sr-only">Skills</span>
+  </a>
+  <a href="#projects" aria-label="Projects" class="mini-nav-btn flex flex-col items-center gap-0.5">
+    <svg class="w-6 h-6 mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+      <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+      <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+      <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+    </svg>
+    <span class="sr-only">Projects</span>
+  </a>
+  <a href="#contact" aria-label="Contact" class="mini-nav-btn flex flex-col items-center gap-0.5">
+    <svg class="w-6 h-6 mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <rect x="2" y="7" width="20" height="14" rx="2"/>
+      <path d="M22 7l-10 6L2 7"/>
+    </svg>
+    <span class="sr-only">Contact</span>
+  </a>
+</nav>
+
   <!-- Header -->
  <!-- Header: Centered, Glassy, Rounded -->
 <!-- Improved Uniform & Animated Navbar -->
 <header class="fixed top-2 left-0 right-0 z-50 flex justify-center pointer-events-none">
-  <nav class="glass-effect pointer-events-auto flex flex-row flex-wrap items-center justify-center gap-5 px-10 py-3 rounded-full shadow-2xl bg-black/30 border border-white/10 backdrop-blur-md">
-    <a href="#home" 
-       class="nav-btn text-lg md:text-xl font-semibold text-white px-6 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 relative overflow-hidden"
-       aria-label="Home">
-      Home
-    </a>
-    <a href="#about"
-       class="nav-btn text-lg md:text-xl font-semibold text-white px-6 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 relative overflow-hidden"
-       aria-label="About">
-      About
-    </a>
-    <a href="#skills"
-       class="nav-btn text-lg md:text-xl font-semibold text-white px-6 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 relative overflow-hidden"
-       aria-label="Skills">
-      Skills
-    </a>
-    <a href="#projects"
-       class="nav-btn text-lg md:text-xl font-semibold text-white px-6 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 relative overflow-hidden"
-       aria-label="Projects">
-      Projects
-    </a>
-    <a href="#contact"
-       class="nav-btn text-lg md:text-xl font-semibold text-white px-6 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 relative overflow-hidden"
-       aria-label="Contact">
-      Contact
-    </a>
+  <nav class="glass-effect pointer-events-auto flex items-center justify-between px-6 py-3 rounded-full shadow-2xl bg-black/30 border border-white/10 backdrop-blur-md max-w-6xl w-full md:w-auto">
+   
+    <!-- Navigation Links -->
+    <div id="nav-menu" class="hidden md:flex flex-row gap-5 items-center justify-center w-full md:w-auto bg-transparent md:bg-transparent">
+      <a href="#home" class="nav-btn">Home</a>
+      <a href="#about" class="nav-btn">About</a>
+      <a href="#skills" class="nav-btn">Skills</a>
+      <a href="#projects" class="nav-btn">Projects</a>
+      <a href="#contact" class="nav-btn">Contact</a>
+    </div>
   </nav>
 </header>
 
-<!-- CSS styles for uniform sizing & animated interaction -->
-<style>
- 
-</style>
+
+
 
 
 <main>
   <!-- Hero Section with 3D Nebula and Glassmorphism -->
-  <section id="home" class="h-screen canvas-section flex flex-col justify-center items-center relative">
-    <canvas id="hero-canvas" class="effect-canvas"></canvas>
-    <div class="content-wrapper h-full flex items-center justify-center text-center">
-      <div class="container mx-auto px-6">
-        <div class="max-w-2xl mx-auto p-10 glass-effect rounded-3xl shadow-2xl flex flex-col items-center">
-          <!-- Your Name with gradient -->
-          <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent mb-3 leading-tight">
+  <section id="home" class="min-h-screen canvas-section flex flex-col justify-center items-center relative bg-gradient-to-tr from-[#18132a] via-[#251b41] to-[#18132a] pb-8">
+    <canvas id="hero-canvas" class="effect-canvas absolute inset-0 pointer-events-none z-0"></canvas>
+    <div class="content-wrapper h-full flex items-center justify-center text-center relative z-10 w-full">
+      <div class="container mx-auto px-2 xs:px-4 sm:px-6">
+        <div class="sm:max-w-xl md:max-w-2xl w-full mx-auto p-4 sm:p-8 md:p-10 glass-effect rounded-3xl shadow-2xl flex flex-col items-center">
+          <!-- Name -->
+          <h1 class="text-3xl xs:text-4xl sm:text-5xl md:text-7xl font-extrabold bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent mb-4 leading-tight drop-shadow-lg break-words">
             Muhammad Murtaza
           </h1>
           <!-- Typewriter Tagline -->
-          <p class="typewriter text-lg md:text-2xl text-slate-100 max-w-xl mx-auto min-h-[2.4em] font-medium mt-2 mb-6"></p>
+          <p class="typewriter text-base xs:text-lg md:text-2xl text-slate-100 max-w-xl mx-auto min-h-[2.2em] font-medium mt-2 mb-6 break-words"></p>
           <!-- Button -->
-          <div class="mt-5 mb-8">
-            <a href="#projects" class="bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 text-white font-bold py-4 px-10 rounded-full text-xl hover:scale-110 hover:shadow-2xl transition-all duration-300 shadow-lg shadow-purple-500/40">
+          <div class="w-full flex flex-col items-center mt-5 mb-8">
+            <a href="#projects" class="w-full sm:w-auto text-lg xs:text-xl bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 text-white font-bold py-3 px-8 sm:px-10 rounded-full shadow-lg shadow-purple-500/40 hover:scale-105 hover:shadow-2xl transition-all duration-300 focus:ring-2 focus:ring-pink-400 focus:outline-none">
               Explore My Universe
             </a>
           </div>
           <!-- Socials -->
-            <div class="flex flex-row gap-6 justify-center items-center mt-2">
-            <!-- GitHub -->
+          <div class="flex flex-row flex-wrap gap-3 xs:gap-4 sm:gap-6 justify-center items-center mt-2">
             <a href="https://github.com/Muhammad-Murtaazaa"
-               class="group flex items-center gap-2 text-slate-100 hover:text-pink-400 transition"
+               class="group flex items-center gap-2 text-slate-100 hover:text-pink-400 transition text-base sm:text-lg"
                target="_blank" rel="noopener" aria-label="GitHub">
-              
-              <span class="text-base font-medium">GitHub</span>
+              <svg width="22" height="22" class="w-6 h-6 sm:w-7 sm:h-7" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.026 2c-5.507 0-9.973 4.468-9.973 9.98 0 4.412 2.865 8.15 6.839 9.488.5.092.682-.216.682-.48 0-.237-.009-.868-.014-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.157-1.112-1.466-1.112-1.466-.909-.625.069-.613.069-.613 1.004.07 1.532 1.032 1.532 1.032.892 1.528 2.341 1.087 2.91.832.092-.647.349-1.087.636-1.338-2.221-.253-4.555-1.112-4.555-4.95 0-1.093.39-1.987 1.029-2.687-.103-.254-.446-1.274.098-2.656 0 0 .84-.27 2.75 1.026a9.564 9.564 0 0 1 2.502-.336 9.59 9.59 0 0 1 2.502.336c1.909-1.296 2.748-1.026 2.748-1.026.546 1.382.202 2.402.099 2.656.64.699 1.029 1.594 1.029 2.687 0 3.847-2.337 4.694-4.565 4.944.359.309.678.918.678 1.851 0 1.336-.012 2.415-.012 2.743 0 .266.18.577.688.479C19.14 20.126 22 16.389 22 11.98c0-5.512-4.467-9.98-9.974-9.98z"/>
+              </svg>
+              <span class="hidden xs:inline text-base font-medium">GitHub</span>
             </a>
-            <!-- LinkedIn -->
             <a href="https://www.linkedin.com/in/muhammad-murtaza-577381327/"
-               class="group flex items-center gap-2 text-slate-100 hover:text-blue-400 transition"
+               class="group flex items-center gap-2 text-slate-100 hover:text-blue-400 transition text-base sm:text-lg"
                target="_blank" rel="noopener" aria-label="LinkedIn">
-              
-              <span class="text-base font-medium">LinkedIn</span>
+              <svg width="22" height="22" class="w-6 h-6 sm:w-7 sm:h-7" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.146 17.146h-2.749v-3.457c0-.823-.015-1.882-1.147-1.882-1.149 0-1.325.899-1.325 1.828v3.511h-2.749V9h2.64v1.115h.037a2.888 2.888 0 0 1 2.604-1.432c2.785 0 3.299 1.833 3.299 4.218v4.245zm-12.146-8.146a1.583 1.583 0 1 1 0-3.166 1.583 1.583 0 0 1 0 3.166zm1.375 8.146h-2.749V9h2.749v8.146zM22.225 0h-20.451C.792 0 0 .77 0 1.723v20.451C0 23.23.792 24 1.774 24h20.451C23.207 24 24 23.23 24 22.178V1.723C24 .77 23.207 0 22.225 0z"/>
+              </svg>
+              <span class="hidden xs:inline text-base font-medium">LinkedIn</span>
             </a>
-            <!-- Email -->
             <a href="mailto:muhammad.murtaazaa@gmail.com"
-               class="group flex items-center gap-2 text-slate-100 hover:text-pink-400 transition"
+               class="group flex items-center gap-2 text-slate-100 hover:text-pink-400 transition text-base sm:text-lg"
                target="_blank" rel="noopener" aria-label="Email">
-             
-              <span class="text-base font-medium">Email</span>
+              <svg width="22" height="22" class="w-6 h-6 sm:w-7 sm:h-7" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 13.5a1 1 0 0 1-.624-.216L2.29 5.263A2 2 0 0 1 4 4h16a2 2 0 0 1 1.711 1.262l-9.086 8.014A1 1 0 0 1 12 13.5zm10 1.299a.997.997 0 0 0 .333-.637V6.207l-7.885 6.946a2.997 2.997 0 0 1-3.896 0L2 6.207V14.16c0 .242.126.474.333.637l6.457 5.987a2.001 2.001 0 0 0 2.414 0l6.457-5.987z"/>
+              </svg>
+              <span class="hidden xs:inline text-base font-medium">Email</span>
             </a>
           </div>
         </div>
